@@ -1,0 +1,16 @@
+
+[	java:S112-"FDefine and throw a dedicated exception instead of using a generic one.(•Ëê 
+`	java:S112'"FDefine and throw a dedicated exception instead of using a generic one.(§ÉÁşÿÿÿÿ
+`	java:S112I"FDefine and throw a dedicated exception instead of using a generic one.(ÔĞ’ôıÿÿÿÿ
+`	java:S112q"FDefine and throw a dedicated exception instead of using a generic one.(ôÑ½âıÿÿÿÿ
+`	java:S112j"FDefine and throw a dedicated exception instead of using a generic one.(‚•Çøÿÿÿÿ
+\	java:S112ƒ"FDefine and throw a dedicated exception instead of using a generic one.(—’Œ¿
+`	java:S112~"FDefine and throw a dedicated exception instead of using a generic one.(§†”ùùÿÿÿÿ
+f	java:S117`"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ºÙ¯
+W
+java:S4973X"<Strings and Boxed types should be compared using "equals()".(œÀõ½úÿÿÿÿ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ßÔ›¥
+M
+java:S1135"2Complete the task associated to this TODO comment.(°Ÿ×®ùÿÿÿÿ
+W
+java:S1126<"AReplace this if-then-else statement by a single return statement.(ÿûŠñ
