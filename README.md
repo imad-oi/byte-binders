@@ -1,7 +1,7 @@
 # Byte Binders - A library for coding books 
-Byte Binders is a platfrom  of coding books. It is a collection of books that cover a wide range of topics in computer science and programming. The library is designed to be a resource for anyone who wants to learn more about coding, whether they are a beginner or an experienced programmer.
+Byte Binders is a BookStore Management System that allows users to view and download coding books. The library contains a collection of books on various programming languages, frameworks, and tools. The books are available in PDF format and can be downloaded for free. The library is designed to be user-friendly and easy to navigate, with a simple and intuitive interface. Users can search for books by title, author, or category, and can view detailed information about each book, including a description, table of contents, and sample pages.
 
-The library is open source and contributions are welcome. If you are interested in contributing, please see the [Contributing](#contributing) section below.
+The project is open source and contributions are welcome. If you are interested in contributing, please see the [Contributing](#contributing) section below.
 
 
 # Table of Contents
