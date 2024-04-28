@@ -1,27 +1,26 @@
-# React + TypeScript + Vite
+# Byte Binders - A library for coding books 
+Byte Binders is a platfrom  of coding books. It is a collection of books that cover a wide range of topics in computer science and programming. The library is designed to be a resource for anyone who wants to learn more about coding, whether they are a beginner or an experienced programmer.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The library is open source and contributions are welcome. If you are interested in contributing, please see the [Contributing](#contributing) section below.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Table of Contents
+- [Getting Started](#getting-started)
+- [Contributing](#contributing)
+- [License](#license)
 
-## Expanding the ESLint configuration
+# Getting Started
+To get started with Byte Binders, you can visit the [Byte Binders website](https://bytebinders.github.io/). The website contains a list of all the books in the library. You can click on a book to view it in your browser. You can also download the books as PDFs by clicking on the "Download PDF" button on the book's page.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+# Contributing
+If you are interested in contributing to Byte Binders, you can do so by following these steps:
+1. Fork the [Byte Binders repository]()
+2. Clone your forked repository to your local machine
+3. Create a new branch for your changes
+4. Make your changes you want to contribute to
+5. Commit your changes
+6. Push your changes to your forked repository
+7. Create a pull request to the main Byte Binders repository
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+# License
+Byte Binders is licensed under the [MIT License](https://opensource.org/licenses/MIT). You are free to use, modify, and distribute the code in this repository as you see fit.
