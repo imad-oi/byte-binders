@@ -33,9 +33,8 @@ const ShelfPage = () => {
     ];
 
     return (
-        <div className="p-4 md:p-7">
+        <div className="p-4 md:p-7 mt-16 min-h-screen">
             <div className="md:mx-32">
-
                 <div className="mb-4 border-b border-gray-200">
                     <ul className="flex flex-wrap -mb-px text-sm font-medium text-center ">
                         {listMenu.map((item, i) => (

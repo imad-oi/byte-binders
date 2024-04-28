@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
 import { BiSolidStar } from "react-icons/bi";
+import { useLocation } from "react-router-dom";
 import ReviewModel from "../../../models/ReviewModel";
+import Pagination from "../../utils/Pagination";
 import Review from "../../utils/Review";
 import StarsReview from "../../utils/StarsReview";
-import Pagination from "../../utils/Pagination";
-import Breadcrumbs from "../../utils/Breadcrumbs";
-import { useLocation } from "react-router-dom";
 
 const ReviewListPage = () => {
     const [reviews, setReviews] = useState<ReviewModel[]>([]);
@@ -71,15 +70,15 @@ const ReviewListPage = () => {
     const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
     return (
-        <div className="p-4 md:p-7 md:px-32">
+        <div className="p-4 md:p-7 md:px-32 mt-16 h-screen">
 
-            <Breadcrumbs itemsList={["Home", "Books", "Book Title"]} />
+            {/* <Breadcrumbs itemsList={["Home", "Books", "Book Title"]} /> */}
 
             <div className="flex flex-col md:flex-row md:justify-start md:items-start gap-16 pt-4 ">
                 <div id="BasedCustomerReviews" className="px-4">
                     <h1 className="text-slate-700 text-xl md:text-2xl font-bold ">Customer Reviews</h1>
                     <div className="flex items-center gap-2">
-                        <StarsReview rating={4.5} size={16} />
+                        <StarsReview rating={3.5} size={16} />
                         <p className="text-slate-500">
                             Based on {totalAmountReviews} customer reviews
                         </p>
@@ -88,37 +87,37 @@ const ReviewListPage = () => {
                         <div className="flex items-center gap-6">
                             5<BiSolidStar size={24} className="text-yellow-500" />
                             <div className="w-full bg-gray-200 rounded-full h-3 ">
-                                <div className="bg-yellow-500 h-3 rounded-full w-[75%]"></div>
+                                <div className="bg-yellow-500 h-3 rounded-full w-[0%]"></div>
                             </div>
-                            <p>43%</p>
+                            <p>0%</p>
                         </div>
                         <div className="flex items-center gap-6">
                             4 <BiSolidStar size={24} className="text-yellow-500" />
                             <div className="w-full bg-gray-200 rounded-full h-3">
-                                <div className="bg-yellow-500 h-3 rounded-full w-[25%]"></div>
+                                <div className="bg-yellow-500 h-3 rounded-full w-[50%]"></div>
                             </div>
-                            <p>43%</p>
+                            <p>50%</p>
                         </div>
                         <div className="flex items-center gap-6">
-                            4 <BiSolidStar size={24} className="text-yellow-500" />
+                            3 <BiSolidStar size={24} className="text-yellow-500" />
                             <div className="w-full bg-gray-200 rounded-full h-3">
-                                <div className="bg-yellow-500 h-3 rounded-full w-[25%]"></div>
+                                <div className="bg-yellow-500 h-3 rounded-full w-[0%]"></div>
                             </div>
-                            <p>43%</p>
+                            <p>0%</p>
                         </div>
                         <div className="flex items-center gap-6">
-                            4 <BiSolidStar size={24} className="text-yellow-500" />
+                            2 <BiSolidStar size={24} className="text-yellow-500" />
                             <div className="w-full bg-gray-200 rounded-full h-3">
-                                <div className="bg-yellow-500 h-3 rounded-full w-[25%]"></div>
+                                <div className="bg-yellow-500 h-3 rounded-full w-[0%]"></div>
                             </div>
-                            <p>43%</p>
+                            <p>0%</p>
                         </div>
                         <div className="flex items-center gap-6">
-                            4 <BiSolidStar size={24} className="text-yellow-500" />
+                            1 <BiSolidStar size={24} className="text-yellow-500" />
                             <div className="w-full bg-gray-200 rounded-full h-3">
-                                <div className="bg-yellow-500 h-3 rounded-full w-[25%]"></div>
+                                <div className="bg-yellow-500 h-3 rounded-full w-[50%]"></div>
                             </div>
-                            <p>43%</p>
+                            <p>50%</p>
                         </div>
 
                     </div>

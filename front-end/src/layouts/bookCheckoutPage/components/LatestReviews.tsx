@@ -1,8 +1,6 @@
-import { AiFillStar } from "react-icons/ai"
-import ReviewModel from "../../../models/ReviewModel"
-import StarsReview from "../../utils/StarsReview";
-import Review from "../../utils/Review";
 import { Link } from "react-router-dom";
+import ReviewModel from "../../../models/ReviewModel";
+import Review from "../../utils/Review";
 
 type LatestReviewsProps = {
   reviews: ReviewModel[],

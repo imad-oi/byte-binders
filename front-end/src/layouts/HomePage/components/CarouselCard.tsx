@@ -1,5 +1,4 @@
 import BookModel from "../../../models/BookModel";
-import { Link } from 'react-router-dom';
 
 const image2 = "./src/Images/BooksImages/new-book-1.png";
 

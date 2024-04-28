@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+import { Component } from "react";
 import Swipe from "react-easy-swipe";
+import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 
 const CarouselData = [
   {

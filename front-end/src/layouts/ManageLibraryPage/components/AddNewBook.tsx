@@ -11,15 +11,12 @@ const bookCategories = [
     { id: 5, name: "Data", value: "data" },
 ]
 
-type AddNewBookProps = {
-    setShowAlert: (showAlert: boolean) => void;
-    setAlertDesc: (alertDesc: string) => void;
-}
+// type AddNewBookProps = {
+//     setShowAlert: (showAlert: boolean) => void;
+//     setAlertDesc: (alertDesc: string) => void;
+// }
 
-const AddNewBook: React.FC<AddNewBookProps> = ({
-    setShowAlert,
-    setAlertDesc
-}) => {
+const AddNewBook = () => {
 
     const { authState } = useOktaAuth();
 
@@ -86,8 +83,8 @@ const AddNewBook: React.FC<AddNewBookProps> = ({
             const submitBookResponse = await fetch(url, requestOptions);
             if (!submitBookResponse.ok) {
                 console.log(submitBookResponse);
-                setAlertDesc("Something went wrong");
-                setShowAlert(true);
+                // setAlertDesc("Something went wrong");
+                // setShowAlert(true);
             }
             setNewBook({
                 ...newBook,
@@ -95,9 +92,9 @@ const AddNewBook: React.FC<AddNewBookProps> = ({
             });
             setSelectedImage(null);
             setImageName("");
-            setShowAlert(true);
+            // setShowAlert(true);
             window.scrollTo(0, 0);
-            setAlertDesc("Book added successfully");
+            // setAlertDesc("Book added successfully");
         }
     }
 

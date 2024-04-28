@@ -4,8 +4,11 @@ import { defineConfig } from 'vite'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  // server: {
-  //   // https: true,
-  //   port: 3000,
-  // },
+  server: {
+    // https: true,
+    port: 3000,
+  },
+  resolve: {
+    alias: [{ find: "@/", replacement: "/src" }],
+  }
 })

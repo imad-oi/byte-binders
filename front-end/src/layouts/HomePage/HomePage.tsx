@@ -1,19 +1,18 @@
-import InCarousel from "./components/Carousel"
-import ExploreTopBooks from "./components/ExploreTopBooks"
-import Heros from "./components/Heros"
+import BooksCarousel from "./components/Carousel"
+import ZigZag from "./components/ZigZag"
 import LibraryServices from "./components/LibraryServices"
+import MainHero from "./components/MainHero"
 
 const HomePage = () => {
     return (
-        <>
-            <div className="md:px-7">
-                <ExploreTopBooks />
-            </div>
-            <InCarousel />
-            <Heros />
+        <div className="mx-auto ">
+            {/* <ExploreTopBooks /> */}
+            <MainHero />
+            <BooksCarousel />
+            <ZigZag />
             <hr className="mt-2 w-1/2 mx-auto block " />
             <LibraryServices />
-        </>
+        </div>
     )
 }
 

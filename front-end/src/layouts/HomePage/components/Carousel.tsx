@@ -32,7 +32,7 @@ export const CarouselData = [
     },
 ];
 
-const Carousel = () => {
+const BooksCarousel = () => {
     const [books, setBooks] = useState<BookModel[]>([]);
     const [isLoading, setIsLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
@@ -139,4 +139,4 @@ const Carousel = () => {
     )
 }
 
-export default Carousel
+export default BooksCarousel

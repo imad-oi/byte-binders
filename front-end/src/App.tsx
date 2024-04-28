@@ -4,15 +4,18 @@ import { Route, Switch, useHistory, useLocation } from 'react-router-dom';
 
 // @ts-ignore
 import LoginWidget from "./auth/LoginWidget";
+import HomePage from "./layouts/HomePage/HomePage";
+import Footer from "./layouts/NavbarAndFooter/Footer";
+// import Navbar from "./layouts/NavbarAndFooter/Navbar";
 import BookCheckoutPage from "./layouts/bookCheckoutPage/BookCheckoutPage";
 import ReviewListPage from "./layouts/bookCheckoutPage/reviewListPage/ReviewListPage";
-import HomePage from "./layouts/HomePage/HomePage"
-import Footer from "./layouts/NavbarAndFooter/Footer"
-import Navbar from "./layouts/NavbarAndFooter/Navbar"
-import SearchBookPage from "./layouts/searchBookPage/SearchBookPage"
+import { Dashboard } from "./layouts/dashboard";
+import MessagesPage from "./layouts/messagesPage/MessagesPage";
+import SearchBookPage from "./layouts/searchBookPage/SearchBookPage";
 import ShelfPage from "./layouts/shelfPage/ShelfPage";
 import { oktaConfig } from "./lib/oktaConfig";
-import MessagesPage from "./layouts/messagesPage/MessagesPage";
+import Contact from "./layouts/contactPage";
+import Header from "./layouts/Header";
 import ManageLibraryPage from "./layouts/ManageLibraryPage/ManageLibraryPage";
 
 const oktaAuth = new OktaAuth(oktaConfig)
@@ -30,29 +33,47 @@ function App() {
   // Determine whether to render the Navbar based on the pathname
   const shouldRenderNavbar = !["/login", "/login/callback"].includes(location.pathname);
   // const shouldRenderFooterForAdmin = !["/login", "/login/callback", "/admin"].includes(location.pathname);
-  const shouldRenderFooterForAdmin = location.pathname !== "/admin";
+  const shouldRenderFooterForAdmin = (!location.pathname.match(`/admin/*`));
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+    <div
+      className="flex flex-col mix-h-[100vh]"
+    // style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}
+    >
       <Security
         oktaAuth={oktaAuth}
         onAuthRequired={custmAuthHANdler}
         restoreOriginalUri={restoreOriginalUri}
       >
-        {(shouldRenderNavbar && shouldRenderFooterForAdmin ) && <Navbar />}
+        {(shouldRenderNavbar && shouldRenderFooterForAdmin) && <Header />}
         <div className="flex-1">
           <Switch>
             <Route path="/" exact component={HomePage} />
             <Route path="/search" component={SearchBookPage} />
+            <Route path="/contact" component={Contact} />
             <Route path="/checkout/:id" component={BookCheckoutPage} />
             <Route path="/login">
-              <LoginWidget config={oktaConfig} />
+              <div
+                className="flex justify-center items-center h-screen"
+              >
+                <LoginWidget config={oktaConfig} />
+              </div>
             </Route>
             <Route path="/login/callback" component={LoginCallback} />
             <Route path="/reviewlist/:bookId" component={ReviewListPage} />
+            {/* <Route path="/shelf" component={ShelfPage} />
+            <Route path="/messages" component={MessagesPage} />
+            <Route path="/admin" component={Dashboard} /> */}
+            <Route path="*" component={
+              () => <div
+                className="flex justify-center items-center h-screen"
+              >404 Not Found</div>
+            } />
+
             <SecureRoute path="/shelf" component={ShelfPage} />
             <SecureRoute path="/messages" component={MessagesPage} />
             <SecureRoute path="/admin" component={ManageLibraryPage} />
+            <SecureRoute path="/dashboard" component={Dashboard} />
           </Switch>
         </div>
         {(shouldRenderNavbar && shouldRenderFooterForAdmin) && <Footer />}
