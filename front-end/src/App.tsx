@@ -62,17 +62,17 @@ function App() {
             <Route path="/login/callback" component={LoginCallback} />
             <Route path="/reviewlist/:bookId" component={ReviewListPage} />
             {/* <Route path="/shelf" component={ShelfPage} />
-            <Route path="/messages" component={MessagesPage} />
-            <Route path="/admin" component={Dashboard} /> */}
+            <Route path="/messages" component={MessagesPage} /> */}
+            <Route path="/admin" component={Dashboard} />
             <Route path="*" component={
               () => <div
                 className="flex justify-center items-center h-screen"
               >404 Not Found</div>
             } />
 
+            <SecureRoute path="/admin" component={ManageLibraryPage} />
             <SecureRoute path="/shelf" component={ShelfPage} />
             <SecureRoute path="/messages" component={MessagesPage} />
-            <SecureRoute path="/admin" component={ManageLibraryPage} />
             <SecureRoute path="/dashboard" component={Dashboard} />
           </Switch>
         </div>

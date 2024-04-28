@@ -244,7 +244,7 @@ const BookCheckoutPage = () => {
 
 
   return (
-    <div className="p-9 w-full mt-16">
+    <div className="p-9 w-full mt-20">
       <div className="md:px-6 bg-amber-00 flex flex-col items-start md:flex-row md:items-start md:justify-around w-full">
         <div
           className="md:gap-x-16 flex flex-col items-center md:flex-row md:justify-between md:items-start
